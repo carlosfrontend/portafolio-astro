@@ -1,0 +1,20 @@
+---
+type prefix = '#brand-';
+type brandId =
+  | `${prefix}github`
+  | `${prefix}linkedin`
+  | `${prefix}twitter`
+  | `${prefix}discord`;
+
+interface Props {
+  id: brandId;
+  title: string;
+}
+
+const { id, title } = Astro.props;
+---
+
+<svg class='size-8 transition-transform hover:scale-110' viewBox='0 0 24 24'>
+  <title>{title}</title>
+  <use href={id}></use>
+</svg>

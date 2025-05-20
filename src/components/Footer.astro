@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.webp';
+import Logo from './Logo.astro';
+---
+
+<footer
+  class='footer bg-base-100 shadow-sm flex flex-col gap-1 items-center p-4 md:justify-between md:flex-row-reverse'
+>
+  <nav class='grid-flow-col gap-4 md:justify-self-end py-2'>
+    <a href='https://www.linkedin.com/in/carlosfrontend/' target='_blank'>
+      <Logo
+        id={'#brand-linkedin'}
+        title='Ir a al perfil de Carlos en Linkedin'
+      />
+    </a>
+    <a href='#' target='_blank'>
+      <Logo id={'#brand-github'} title='Ir a al perfil de Carlos en Github' />
+    </a>
+    <a href='https://x.com/CarlosFrontEnd' target='_blank'>
+      <Logo id={'#brand-twitter'} title='Ir a al perfil de Carlos en X' />
+    </a>
+    <a href='https://discord.gg/2wyag2pN6q' target='_blank'>
+      <Logo id={'#brand-discord'} title='Ir a al perfil de Carlos en Discord' />
+    </a>
+  </nav>
+  <aside class='grid-flow-col items-center'>
+    <Image
+      src={logo}
+      alt='Logo'
+      width={32}
+      height={32}
+      alt='Logo del portafolio'
+    />
+    <p>
+      Hecho por Carlos Pulido - {new Date().getFullYear()}
+    </p>
+  </aside>
+</footer>

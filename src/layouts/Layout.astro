@@ -1,10 +1,17 @@
 ---
-
+import fs from 'fs';
+const sprite = fs.readFileSync('./src/assets/sprite.svg', 'utf-8');
 ---
 
 <!doctype html>
 <html lang='es'>
   <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <meta name='description' content='Astro Basics' />
+    <title>Astro Basics</title>
     <script is:inline>
       if (localStorage.getItem('theme') === null) {
         document.documentElement.setAttribute('data-theme', 'dark');
@@ -20,13 +27,9 @@
       import { themeChange } from 'theme-change';
       themeChange();
     </script>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='generator' content={Astro.generator} />
-    <title>Astro Basics</title>
   </head>
   <body>
+    <div set:html={sprite} />
     <slot />
   </body>
 </html>

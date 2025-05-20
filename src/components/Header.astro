@@ -1,8 +1,18 @@
-<header>
+---
+import Image from 'astro/components/Image.astro';
+import logo from '../assets/logo.webp';
+---
+
+<header class='sticky top-0 z-50'>
   <div class='navbar bg-base-100 shadow-sm'>
     <div class='navbar-start'>
       <div class='dropdown'>
-        <div tabindex='0' role='button' class='btn btn-ghost lg:hidden'>
+        <div
+          tabindex='0'
+          role='button'
+          aria-label='Menu'
+          class='btn btn-ghost lg:hidden'
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             class='h-5 w-5'
@@ -21,38 +31,47 @@
           tabindex='0'
           class='menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow'
         >
-          <li><a>Inicio</a></li>
-          <li><a>Sobre mí</a></li>
-          <li><a>Proyectos</a></li>
-          <li><a>Blog</a></li>
-          <li><a>Contacto</a></li>
+          <li><a href='/'>Inicio</a></li>
+          <li><a href='/about'>Sobre mí</a></li>
+          <li><a href='/projects'>Proyectos</a></li>
+          <li><a href='/blog'>Blog</a></li>
+          <li><a href='/contact'>Contacto</a></li>
         </ul>
       </div>
-      <a class='btn btn-ghost text-xl'>Carlos Pulido</a>
+      <a class='btn btn-ghost normal-case text-xl' href='/'
+        ><Image
+          loading='eager'
+          width={32}
+          src={logo}
+          alt='Logo del portafolio'
+        />Carlos Pulido</a
+      >
     </div>
     <div class='navbar-center hidden lg:flex'>
       <ul class='menu menu-horizontal px-1'>
-        <li><a>Inicio</a></li>
-        <li><a>Sobre mí</a></li>
-        <li><a>Proyectos</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Contacto</a></li>
+        <li><a href='/'>Inicio</a></li>
+        <li><a href='/about'>Sobre mí</a></li>
+        <li><a href='/projects'>Proyectos</a></li>
+        <li><a href='/blog'>Blog</a></li>
+        <li><a href='/contact'>Contacto</a></li>
       </ul>
     </div>
     <div class='navbar-end'>
-      <label class='toggle text-base-content'>
+      <label class='toggle text-base-content' for='theme-controller'>
         <input
+          aria-label='Cambiar entre tema oscuro y tema de claro'
           type='checkbox'
           value='synthwave'
           class='theme-controller'
           data-toggle-theme='dark,fantasy'
           data-act-class='ACTIVECLASS'
+          id='theme-controller'
         />
 
         <svg
-          aria-label='sun'
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 24 24'
+          aria-label='Ilustración de la luna'
           ><g
             stroke-linejoin='round'
             stroke-linecap='round'
@@ -68,9 +87,9 @@
         >
 
         <svg
-          aria-label='moon'
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 24 24'
+          aria-label='Ilustración del sol'
           ><g
             stroke-linejoin='round'
             stroke-linecap='round'

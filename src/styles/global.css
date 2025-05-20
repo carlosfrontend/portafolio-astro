@@ -1,7 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/inter');
 @import 'tailwindcss';
 @plugin "daisyui" {
   themes:
     dark --default,
     dark --prefersdark,
     fantasy;
+}
+
+html {
+  font-family: Inter, sans-serif;
 }
