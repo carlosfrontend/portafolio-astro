@@ -1,13 +1,13 @@
 ---
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 ---
 
-<Layout title='Astro Basics'>
-  <Header />
-  <div
+<Layout
+  title='Potafolio de Carlos Pulido - Desarrollador Web Frontend'
+  description='Explora el portafolio de Carlos Pulido, desarrollador web frontend. Proyectos dinámicos creados con HTML, CSS, JavaScript, TypeScript y Tailwind CSS. ¡Descubre mi trabajo!'
+>
+  <main
     class='hero min-h-screen bg-[url("../assets/images/background.webp")] bg-blend-darken bg-black/50'
   >
     <div class='hero-overlay'></div>
@@ -27,6 +27,5 @@ import Footer from '../components/Footer.astro';
         <a href='/about' class='btn btn-info btn-lg'>Adelante</a>
       </div>
     </div>
-  </div>
-  <Footer />
+  </main>
 </Layout>
