@@ -1,0 +1,27 @@
+---
+import profileImage from '../assets/images/profile_image.webp';
+import { Image } from 'astro:assets';
+---
+
+<a
+  href='https://www.linkedin.com/in/carlosfrontend/'
+  target='_blank'
+  title='Ir al perfil de Carlos en Linkedin'
+  class='group'
+>
+  <div
+    class='avatar avatar-online ring-base-50 ring-offset-base-100 w-24 rounded-full ring-2 ring-offset-2 mb-4 group-hover:text-success'
+  >
+    <div class='w-28 rounded-full'>
+      <Image
+        src={profileImage}
+        loading={'eager'}
+        alt='Foto de Carlos Pulido - Desarrollador Web Frontend'
+      />
+    </div>
+  </div>
+  <small
+    class='absolute ml-2 w-20 text-base-50 font-light group-hover:text-success transition duration-300 ease-in-out group-hover:translate-x-0'
+    >Disponible para trabajar</small
+  >
+</a>

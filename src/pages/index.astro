@@ -1,31 +1,12 @@
 ---
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout
   title='Potafolio de Carlos Pulido - Desarrollador Web Frontend'
   description='Explora el portafolio de Carlos Pulido, desarrollador web frontend. Proyectos dinámicos creados con HTML, CSS, JavaScript, TypeScript y Tailwind CSS. ¡Descubre mi trabajo!'
 >
-  <main
-    class='hero min-h-screen bg-[url("../assets/images/background.webp")] bg-blend-darken bg-black/50'
-  >
-    <div class='hero-overlay'></div>
-    <div class='hero-content text-neutral-content text-center'>
-      <div class='max-w-md'>
-        <h1 class='mb-5 text-5xl font-bold split antialiased'>
-          Hola soy <span class='text-accent'>Carlos</span>
-        </h1>
-        <p class='split2 text-2xl font-semibold antialiased'>
-          Bienvenido a mi portafolio.
-        </p>
-        <p class='mb-5 split2 text-2xl font-semibold antialiased'>
-          Aquí encontrarás información sobre mi trayectoria profesional y
-          proyectos personales.
-        </p>
-
-        <a href='/about' class='btn btn-info btn-lg'>Adelante</a>
-      </div>
-    </div>
-  </main>
+  <Hero />
 </Layout>
