@@ -2,27 +2,21 @@
 import { Image } from 'astro:assets';
 import logo from '../assets/images/logo.webp';
 import Logo from './Logo.astro';
+import { LOGOS } from '../constants/SocialLogos';
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
   class='footer bg-base-100 shadow-sm flex flex-col gap-1 items-center p-4 md:justify-between md:flex-row-reverse relative left-0 bottom-0 w-full'
 >
   <nav class='grid-flow-col gap-4 md:justify-self-end py-2'>
-    <a href='https://www.linkedin.com/in/carlosfrontend/' target='_blank'>
-      <Logo
-        id={'#brand-linkedin'}
-        title='Ir a al perfil de Carlos en Linkedin'
-      />
-    </a>
-    <a href='https://github.com/carlosfrontend' target='_blank'>
-      <Logo id={'#brand-github'} title='Ir a al perfil de Carlos en Github' />
-    </a>
-    <a href='https://x.com/CarlosFrontEnd' target='_blank'>
-      <Logo id={'#brand-twitter'} title='Ir a al perfil de Carlos en X' />
-    </a>
-    <a href='https://discord.gg/2wyag2pN6q' target='_blank'>
-      <Logo id={'#brand-discord'} title='Ir a al perfil de Carlos en Discord' />
-    </a>
+    {
+      LOGOS.map(({ id, href, className }) => (
+        <a href={href} target='_blank'>
+          <Logo id={id} title={href} className={className} />
+        </a>
+      ))
+    }
   </nav>
   <aside class='grid-flow-col items-center'>
     <Image
@@ -33,7 +27,7 @@ import Logo from './Logo.astro';
       alt='Logo del portafolio'
     />
     <p>
-      Hecho por Carlos Pulido - {new Date().getFullYear()}
+      Hecho por Carlos Pulido - {currentYear}
     </p>
   </aside>
 </footer>
