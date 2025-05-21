@@ -1,6 +1,7 @@
 ---
 import Image from 'astro/components/Image.astro';
 import logo from '../assets/images/logo.webp';
+let activeClass = 'link-base bg-base-200';
 ---
 
 <header class='sticky top-0 z-50'>
@@ -31,11 +32,38 @@ import logo from '../assets/images/logo.webp';
           tabindex='0'
           class='menu menu-lg dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow'
         >
-          <li><a href='/'>Inicio</a></li>
-          <li><a href='/about'>Sobre mí</a></li>
-          <li><a href='/projects'>Proyectos</a></li>
-          <li><a href='/blog'>Blog</a></li>
-          <li><a href='/contact'>Contacto</a></li>
+          <li>
+            <a href='/' class={Astro.url.pathname === '/' ? activeClass : ''}
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href='/about'
+              class={Astro.url.pathname === '/about' ? activeClass : ''}
+              >Sobre mí</a
+            >
+          </li>
+          <li>
+            <a
+              href='/projects'
+              class={Astro.url.pathname === '/projects' ? activeClass : ''}
+              >Proyectos</a
+            >
+          </li>
+          <li>
+            <a
+              href='/blog'
+              class={Astro.url.pathname === '/blog' ? activeClass : ''}>Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href='/contact'
+              class={Astro.url.pathname === '/contact' ? activeClass : ''}
+              >Contacto</a
+            >
+          </li>
         </ul>
       </div>
       <a class='btn btn-ghost normal-case text-xl' href='/'
@@ -49,11 +77,38 @@ import logo from '../assets/images/logo.webp';
     </div>
     <div class='navbar-center hidden lg:flex'>
       <ul class='menu menu-horizontal px-1'>
-        <li><a href='/'>Inicio</a></li>
-        <li><a href='/about'>Sobre mí</a></li>
-        <li><a href='/projects'>Proyectos</a></li>
-        <li><a href='/blog'>Blog</a></li>
-        <li><a href='/contact'>Contacto</a></li>
+        <li>
+          <a href='/' class={Astro.url.pathname === '/' ? activeClass : ''} '
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            href='/about'
+            class={Astro.url.pathname === '/about' ? activeClass : ''}
+            >Sobre mí</a
+          >
+        </li>
+        <li>
+          <a
+            href='/projects'
+            class={Astro.url.pathname === '/projects' ? activeClass : ''}
+            >Proyectos</a
+          >
+        </li>
+        <li>
+          <a
+            href='/blog'
+            class={Astro.url.pathname === '/blog' ? activeClass : ''}>Blog</a
+          >
+        </li>
+        <li>
+          <a
+            href='/contact'
+            class={Astro.url.pathname === '/contact' ? activeClass : ''}
+            >Contacto</a
+          >
+        </li>
       </ul>
     </div>
     <div class='navbar-end'>
