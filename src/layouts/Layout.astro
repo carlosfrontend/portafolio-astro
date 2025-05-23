@@ -4,6 +4,8 @@ const sprite = fs.readFileSync('./src/assets/images/sprite.svg', 'utf-8');
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { ClientRouter } from 'astro:transitions';
+import Font from 'astro/components/Font.astro';
+import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
@@ -20,6 +22,7 @@ const { title, description } = Astro.props;
     <meta name='generator' content={Astro.generator} />
     <meta name='description' content={description} />
     <title>{title}</title>
+    <Font cssVariable='--font-inter' preload />
     <ClientRouter />
   </head>
   <body>
@@ -29,7 +32,14 @@ const { title, description } = Astro.props;
     <Footer />
   </body>
 </html>
-
+<style>
+  body {
+    font-family: var(--font-inter), var(--font-fallback);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+</style>
 <script is:inline>
   document.addEventListener('astro:page-load', () => {
     if (localStorage.getItem('theme') === null) {

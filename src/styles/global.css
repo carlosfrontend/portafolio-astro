@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+
 @plugin "daisyui" {
   themes:
     dark --default,
@@ -7,52 +8,8 @@
 }
 
 @theme {
-  --font-fallback: 'Adjusted Arial Fallback', system-ui, -apple-system,
-    blinkmacsystemfont, 'Segoe UI', 'Noto Sans', helvetica, arial, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji';
-  --font-primary: 'Inter 18pt';
-}
-
-@font-face {
-  font-family: 'Adjusted Arial Fallback';
-  src: local(Arial);
-  size-adjust: 112%;
-  ascent-override: 74%;
-  descent-override: normal;
-  line-gap-override: normal;
-}
-
-@font-face {
-  font-family: 'Inter 18pt';
-  src: url('../assets/fonts/Inter18pt-Black.woff2') format('woff2');
-  font-weight: 800;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter 18pt';
-  src: url('../assets/fonts/Inter18pt-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter 18pt';
-  src: url('../assets/fonts/Inter18pt-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter 18pt';
-  src: url('../assets/fonts/Inter18pt-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-display: swap;
-}
-
-html {
-  font-family: var(--font-primary), var(--font-fallback);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  --font-fallback:
+    'Adjusted Arial Fallback', system-ui, -apple-system, blinkmacsystemfont,
+    'Segoe UI', 'Noto Sans', helvetica, arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji';
 }
