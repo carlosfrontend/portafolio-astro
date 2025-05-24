@@ -21,6 +21,12 @@ const { title, description } = Astro.props;
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     <meta name='description' content={description} />
+    <script>
+  const theme = localStorage.getItem("theme") || 
+  (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme", theme);
+</script>
+
     <title>{title}</title>
     <Font cssVariable='--font-inter' preload />
     <ClientRouter />

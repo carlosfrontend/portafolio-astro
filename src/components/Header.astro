@@ -1,7 +1,7 @@
 ---
 import Image from 'astro/components/Image.astro';
 import logo from '../assets/images/logo.webp';
-import { ThemeController } from './ThemeController.tsx';
+import ThemeController from './ThemeController.tsx';
 let activeClass = 'link-base bg-violet-700 text-white';
 ---
 
@@ -113,7 +113,15 @@ let activeClass = 'link-base bg-violet-700 text-white';
       </ul>
     </div>
     <div class='navbar-end'>
-      <ThemeController client:visible />
+      <ThemeController client:load />
     </div>
   </div>
 </header>
+<script>
+  const theme =
+    localStorage.getItem('theme') ||
+    (window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+</script>
