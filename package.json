@@ -15,14 +15,9 @@
     "@types/react-dom": "^19.1.5",
     "astro": "^5.7.13",
     "daisyui": "^5.0.35",
-    "gsap": "^3.13.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "sharp": "^0.34.2",
-    "tailwindcss": "^4.1.7",
-    "theme-change": "^2.5.0"
-  },
-  "devDependencies": {
-    "prettier": "^3.5.3"
+    "tailwindcss": "^4.1.7"
   }
 }
