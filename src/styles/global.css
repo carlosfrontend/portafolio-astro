@@ -2,9 +2,9 @@
 
 @plugin "daisyui" {
   themes:
-    dark --default,
-    dark --prefersdark,
-    fantasy;
+    sunset --default,
+    sunset --prefers sunset,
+    light;
 }
 
 @theme {
@@ -12,4 +12,9 @@
     'Adjusted Arial Fallback', system-ui, -apple-system, blinkmacsystemfont,
     'Segoe UI', 'Noto Sans', helvetica, arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji';
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
