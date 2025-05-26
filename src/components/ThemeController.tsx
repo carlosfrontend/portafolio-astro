@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import type { JSX } from "astro/jsx-runtime";
+import { useEffect, useState, type FunctionComponent } from "react";
 
 type Theme = "light" | "dark";
 
-export const ThemeController = () => {
+export const ThemeController: FunctionComponent = (): JSX.Element => {
   const [theme, setTheme] = useState<Theme | null>(null);
 
   // On mount, set theme from localStorage or system preference
@@ -15,7 +16,7 @@ export const ThemeController = () => {
     document.documentElement.setAttribute("data-theme", initialTheme);
   }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme: React.ChangeEventHandler<HTMLInputElement> | undefined = (): void => {
     const newTheme: Theme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);

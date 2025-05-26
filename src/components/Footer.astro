@@ -1,13 +1,13 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/images/logo.webp';
-import Logo from './Logo.astro';
+import Logo from './Logo';
 import { LOGOS } from '../constants/SocialLogos';
 const currentYear = new Date().getFullYear();
 ---
 
 <footer
-  class='footer bg-base-200 shadow-md flex flex-col gap-1 items-center p-4 md:justify-between md:flex-row-reverse relative left-0 bottom-0 w-full'
+  class='footer bg-base-200 shadow-md flex flex-col gap-1 items-center p-4 md:justify-between md:flex-row-reverse relative left-0 bottom-0 w-full z-20 h-45'
 >
   <nav class='grid-flow-col gap-4 md:justify-self-end py-2'>
     {

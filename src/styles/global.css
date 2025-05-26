@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "@midudev/tailwind-animations";
 
 @plugin "daisyui" {
   themes:
@@ -8,10 +9,9 @@
 }
 
 @theme {
-  --font-fallback:
-    'Adjusted Arial Fallback', system-ui, -apple-system, blinkmacsystemfont,
-    'Segoe UI', 'Noto Sans', helvetica, arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji';
+  --font-fallback: 'Adjusted Arial Fallback', system-ui, -apple-system,
+    blinkmacsystemfont, 'Segoe UI', 'Noto Sans', helvetica, arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji';
 }
 @media (prefers-reduced-motion: reduce) {
   html {

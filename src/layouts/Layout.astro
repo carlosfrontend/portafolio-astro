@@ -1,11 +1,11 @@
 ---
+import '../styles/global.css';
 import fs from 'fs';
 const sprite = fs.readFileSync('./src/assets/images/sprite.svg', 'utf-8');
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { ClientRouter } from 'astro:transitions';
 import Font from 'astro/components/Font.astro';
-import '../styles/global.css';
+
 interface Props {
   title: string;
   description?: string;
@@ -22,14 +22,15 @@ const { title, description } = Astro.props;
     <meta name='generator' content={Astro.generator} />
     <meta name='description' content={description} />
     <script>
-  const theme = localStorage.getItem("theme") || 
-  (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  document.documentElement.setAttribute("data-theme", theme);
-</script>
-
+      const theme =
+        localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
     <title>{title}</title>
     <Font cssVariable='--font-inter' preload />
-    <ClientRouter />
   </head>
   <body>
     <Header />
@@ -46,3 +47,48 @@ const { title, description } = Astro.props;
     text-rendering: optimizeLegibility;
   }
 </style>
+
+<!--Start of Tawk.to Script-->
+<script type='text/javascript'>
+  var Tawk_API = Tawk_API || {},
+    Tawk_LoadStart = new Date();
+  (function () {
+    var s1 = document.createElement('script'),
+      s0 = document.getElementsByTagName('script')[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/68335e701a9645190cc349ab/1is4eo9ci';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
+<!--End of Tawk.to Script-->
+
+<script>
+  // Obtener el código del widget de Tawk.to (reemplazar con tu código)
+  const tawkWidgetCode = `
+  var Tawk_API = Tawk_API || {},
+    Tawk_LoadStart = new Date();
+  (function () {
+    var s1 = document.createElement('script'),
+      s0 = document.getElementsByTagName('script')[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/68335e701a9645190cc349ab/1is4eo9ci';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+`;
+
+  // Función para agregar el widget después del renderizado inicial (asincrónica)
+  async function agregarWidgetTawk() {
+    // Agregar el código al DOM después de la carga de la página
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.text = tawkWidgetCode;
+    document.body.appendChild(script);
+  }
+
+  // Llamar a la función cuando la página se carga
+  document.addEventListener('astro:page-load', agregarWidgetTawk);
+</script>

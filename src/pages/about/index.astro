@@ -1,4 +1,5 @@
 ---
+import SkillsCarousel from '../../components/SkillsCarousel';
 import Layout from '../../layouts/Layout.astro';
 ---
 
@@ -6,7 +7,174 @@ import Layout from '../../layouts/Layout.astro';
   title='Sobre Carlos Pulido - Desarrollador Web Frontend | Perfil Profesional'
   description='Conoce a Carlos Pulido, desarrollador web frontend. Descubre mi trayectoria, pasión por el código y el diseño, y cómo puedo aportar valor a tu equipo.'
 >
-  <main class='min-h-screen'>
-    <h1 class='font-medium text-2xl collapse-arrow gap-0'>Hola</h1>
+  <main class='min-h-screen flex flex-col px-4 py-10 items-center md:mt-0'>
+    <div class='max-w-xl'>
+      <h1
+        class='font-black text-5xl antialiased mb-10 text-primary text-center'
+      >
+        Perfil Profesional
+      </h1>
+
+      <div class='divider'>
+        <h3 class='text-primary'>Introducción</h3>
+      </div>
+
+      <p class='text-pretty text-xl'>
+        Soy Carlos Pulido, desarrollador web frontend con experiencia en
+        tecnologías como HTML, CSS, JavaScript, TypeScript y Tailwind CSS. Mi
+        pasión por el desarrollo web me impulsa a crear soluciones innovadoras y
+        atractivas para los usuarios. A lo largo de mi carrera, he trabajado en
+        proyectos desafiantes, colaborando con equipos multidisciplinarios y
+        utilizando metodologías ágiles para garantizar la calidad y la
+        eficiencia del desarrollo.
+      </p>
+      <div class='divider'>
+        <h1 class='text-primary'>Mis Habilidades</h1>
+      </div>
+      <p class='text-pretty text-xl'>
+        Mi enfoque en el diseño y la experiencia del usuario me permite crear
+        interfaces intuitivas y atractivas que proporcionen una experiencia de
+        usuario excepcional. En resumen, soy un desarrollador web frontend
+        comprometido con la calidad y el diseño.
+      </p>
+      <p class='text-pretty text-xl'>
+        Mi enfoque en el diseño y la experiencia del usuario me permite crear
+        interfaces intuitivas y atractivas que proporcionen una experiencia de
+        usuario excepcional. En resumen, soy un desarrollador web frontend
+        comprometido con la calidad y el diseño.
+      </p>
+      <div class='divider'>
+        <h3 class='text-primary'>Aficiones</h3>
+      </div>
+      <p class='text-pretty text-xl'>
+        Me encanta explorar nuevas tecnologías y aprender sobre el mundo de la
+        programación. Además soy un aficionado del senderismo y la musica.
+      </p>
+      <div class='divider'>
+        <h3 class='text-primary'>Timeline</h3>
+      </div>
+      <div class='flex justify-center items-center w-full'>
+        <ul class='timeline timeline-vertical w-full md:w-80'>
+          <li>
+            <div class='timeline-start'>Actualidad</div>
+            <div class='timeline-middle'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 20 20'
+                fill='currentColor'
+                class='h-5 w-5'
+              >
+                <path
+                  fill-rule='evenodd'
+                  d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                  clip-rule='evenodd'></path>
+              </svg>
+            </div>
+            <div class='timeline-end timeline-box'>
+              Desarrollador Frontend Junior.
+            </div>
+            <hr />
+          </li>
+          <li>
+            <hr />
+            <div class='timeline-start'>2016-2023</div>
+            <div class='timeline-middle'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 20 20'
+                fill='currentColor'
+                class='h-5 w-5'
+              >
+                <path
+                  fill-rule='evenodd'
+                  d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                  clip-rule='evenodd'></path>
+              </svg>
+            </div>
+            <div class='timeline-end timeline-box'>
+              Auxiliar Administrativo en el Servicio Madrileño de Salud.
+            </div>
+            <hr />
+          </li>
+          <li>
+            <hr />
+            <div class='timeline-start'>2003-2015</div>
+            <div class='timeline-middle'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 20 20'
+                fill='currentColor'
+                class='h-5 w-5'
+              >
+                <path
+                  fill-rule='evenodd'
+                  d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                  clip-rule='evenodd'></path>
+              </svg>
+            </div>
+            <div class='timeline-end timeline-box'>
+              Dinamizador y Formador en Nuevas Tecnologías en Redint.
+            </div>
+            <hr />
+          </li>
+          <li>
+            <hr />
+            <div class='timeline-start'>2003</div>
+            <div class='timeline-middle'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 20 20'
+                fill='currentColor'
+                class='h-5 w-5'
+              >
+                <path
+                  fill-rule='evenodd'
+                  d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                  clip-rule='evenodd'></path>
+              </svg>
+            </div>
+            <div class='timeline-end timeline-box'>
+              Operador de Cámara y Escenografía Virtual en Expansion TV.
+            </div>
+            <hr />
+          </li>
+          <li>
+            <hr />
+            <div class='timeline-start'>2001-2003</div>
+            <div class='timeline-middle'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 20 20'
+                fill='currentColor'
+                class='h-5 w-5'
+              >
+                <path
+                  fill-rule='evenodd'
+                  d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+                  clip-rule='evenodd'></path>
+              </svg>
+            </div>
+            <div class='timeline-end timeline-box'>
+              Técnico Superior en Imagen en el I.E.S. Puerta Bonita.
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class='divider'>
+        <h3 class='text-primary'>Tecnologías</h3>
+      </div>
+      <!-- Carousel goes here -->
+      <SkillsCarousel client:load />
+      <div class='divider'>
+        <h3 class='text-primary'>Proyectos</h3>
+      </div>
+      <div class='flex flex-col items-center justify-between h-30 mt-10'>
+        <p>Haz click en el botón de abajo para ver algunos de mis proyectos</p>
+        <a
+          class='btn btn-primary btn-xl transition-transform ease-in-out hover:scale-105'
+          href='/projects'>Proyectos</a
+        >
+      </div>
+    </div>
   </main>
 </Layout>

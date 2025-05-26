@@ -1,72 +1,67 @@
 ---
 import Avatar from './Avatar.astro';
-import Logo from './Logo.astro';
+import Logo from './Logo';
+import ClipBoard from './ClipBoard';
 ---
 
-<main class='min-h-screen flex flex-col justify-center items-center'>
+<main
+  class='min-h-screen flex flex-col justify-center items-center mt-18 md:mt-0'
+>
   <div class='hero-overlay'></div>
   <div class='hero-content text-center'>
     <div class='max-w-xl'>
+      <h1 class='font-black text-5xl antialiased mb-10'>
+        Hola soy <span class='text-primary'>Carlos</span>
+      </h1>
+      <h2 class='font-medium text-2xl mb-10 italic'>
+        <em>Desarrollador Web <span>Frontend</span></em>
+      </h2>
       <Avatar />
       <div
-        class='flex flex-col md:flex-row justify-center items-center gap-4 pb-12 md:pb-6 pt-4'
+        class='flex flex-col justify-center items-center gap-4 pb-12 md:pb-6 pt-4'
       >
-        <div class='flex flex-col justify-center items-center gap-4'>
-          <span>
-            <Logo className='size-5' id='#cloud' title='cloud logo' />
-          </span>
-          <a
-            href='/Carlos_Pulido_CV_ES_.pdf'
-            target='_blank'
-            class='btn btn-sm w-70 py-5 md:w-auto btn-outline'
-          >
-            Desgargar CV</a
-          >
+        <div class='flex flex-col md:flex-row gap-4'>
+          <div class='flex flex-col justify-center items-center gap-4'>
+            <span>
+              <Logo className='size-5' id='#cloud' title='cloud logo' />
+            </span>
+            <a
+              href='/Carlos_Pulido_CV_ES_.pdf'
+              target='_blank'
+              class='btn btn-sm w-70 py-5 md:w-auto btn-outline'
+            >
+              Desgargar CV</a
+            >
+          </div>
+          <div class='flex flex-col justify-center items-center gap-4'>
+            <span>
+              <Logo className='size-5' id='#message' title='email logo' />
+            </span>
+            <a
+              href='mailto:carlosfrontend@hotmail.com'
+              target='_blank'
+              class='btn btn-sm w-70 py-5 md:w-auto btn-outline'
+            >
+              Enviar Email</a
+            >
+          </div>
+          <ClipBoard client:load />
         </div>
-        <div class='flex flex-col justify-center items-center gap-4'>
-          <span>
-            <Logo className='size-5' id='#message' title='email logo' />
-          </span>
-          <a
-            href='mailto:carlosfrontend@hotmail.com'
-            target='_blank'
-            class='btn btn-sm w-70 py-5 md:w-auto btn-outline'
-          >
-            Enviar Email</a
-          >
-        </div>
-        <div class='flex flex-col justify-center items-center gap-4'>
-          <span
-            ><Logo
-              className='size-4'
-              id='#copy'
-              className='size-5'
-              title='copy logo'
-            /></span
-          >
-          <button class='btn btn-sm w-70 py-5 md:w-auto btn-outline'
-            >Copiar Email</button
-          >
-        </div>
+
+        <p
+          class='font-bold text-md text-base-content antialiased my-10 text-center'
+        >
+          Bienvenido a mi portafolio. Aquí encontrarás información sobre mi
+          trayectoria profesional y proyectos personales.
+        </p>
+
+        <a
+          href='/about'
+          class='btn btn-primary btn-xl transition-transform ease-in-out hover:scale-105'
+        >
+          <span class='text-base-300'>Adelante</span>
+        </a>
       </div>
-
-      <h1 class='font-black mb-5 text-5xl antialiased'>
-        Hola soy <span class='text-accent'>Carlos</span>
-      </h1>
-      <p class='font-bold text-xl text-base-content antialiased'>
-        Bienvenido a mi portafolio.
-      </p>
-      <p class='font-bold mb-5 text-xl antialiased'>
-        Aquí encontrarás información sobre mi trayectoria profesional y
-        proyectos personales.
-      </p>
-
-      <a
-        href='/about'
-        class='btn btn-primary btn-lg transition-transform ease-in-out hover:scale-105'
-      >
-        <span class='text-base-300'>Adelante</span>
-      </a>
     </div>
   </div>
 </main>
