@@ -1,5 +1,5 @@
 ---
-import SkillsCarousel from '../../components/SkillsCarousel';
+import SkillsCarousel from '../../components/SkillsCarousel.astro';
 import Layout from '../../layouts/Layout.astro';
 ---
 
@@ -10,22 +10,13 @@ import Layout from '../../layouts/Layout.astro';
   <main
     class='relative w-full mt-0 flex flex-col px-4 items-center justify-around md:mt-0'
   >
-    <div class='breadcrumbs text-sm flex flex-wrap relative top-10'>
-      <ul>
-        <li><a>Habilidades</a></li>
-        <li><a>Aficiones</a></li>
-        <li><a>Timeline</a></li>
-        <li><a>Tecnologías</a></li>
-        <li><a>Proyectos destacados</a></li>
-      </ul>
-    </div>
     <div class='max-w-xs mt-20 mb-50 min-h-full px-6 py-4 md:max-w-xl'>
       <h1 class='font-black text-3xl md:text-5xl antialiased mb-20 text-center'>
         Perfil <span class='text-primary'>Profesional</span>
       </h1>
 
       <div class='divider'>
-        <h3 class='text-primary text-2xl'>Introducción</h3>
+        <h2 class='text-primary text-2xl'>Introducción</h2>
       </div>
 
       <p
@@ -39,8 +30,8 @@ import Layout from '../../layouts/Layout.astro';
         utilizando metodologías ágiles para garantizar la calidad y la
         eficiencia del desarrollo.
       </p>
-      <div class='divider'>
-        <h3 class='text-primary text-2xl'>Mis Habilidades</h3>
+      <div id='habilidades' class='divider'>
+        <h2 class='text-primary text-2xl'>Mis Habilidades</h2>
       </div>
       <p
         class='text-pretty font-normal text-md md:text-xl pb-20 leading-relaxed'
@@ -59,14 +50,14 @@ import Layout from '../../layouts/Layout.astro';
         comprometido con la calidad y el diseño.
       </p>
       <div class='divider'>
-        <h3 class='text-primary text-2xl'>Aficiones</h3>
+        <h2 class='text-primary text-2xl'>Aficiones</h2>
       </div>
       <p class='text-pretty text-md md:text-xl mb-20'>
         Me encanta explorar nuevas tecnologías y aprender sobre el mundo de la
         programación. Además soy un aficionado del senderismo y la musica.
       </p>
       <div class='divider mb-20'>
-        <h3 class='text-primary text-2xl'>Timeline</h3>
+        <h2 class='text-primary text-2xl'>Timeline</h2>
       </div>
       <div class='flex justify-center items-center w-full mb-20'>
         <ul class='timeline timeline-vertical w-full md:w-80'>
@@ -176,12 +167,12 @@ import Layout from '../../layouts/Layout.astro';
         </ul>
       </div>
       <div class='divider'>
-        <h3 class='text-primary text-2xl'>Tecnologías</h3>
+        <h2 class='text-primary text-2xl'>Tecnologías que uso</h2>
       </div>
       <!-- Carousel goes here -->
-      <SkillsCarousel client:load />
+      <SkillsCarousel />
       <div class='divider mb-20'>
-        <h3 class='text-primary text-2xl'>Proyectos destacados</h3>
+        <h2 class='text-primary text-2xl'>Proyectos destacados</h2>
       </div>
       <div class='flex flex-col items-center justify-between h-30'>
         <p class='text-pretty text-md md:text-xl mb-20'>
@@ -233,3 +224,23 @@ import Layout from '../../layouts/Layout.astro';
         Libero, cumque laudantium.
       </p>
     </div> -->
+<script is:inline data-astro-rerun>
+  const scrollers = document.querySelectorAll('.scroller');
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    addAnimation();
+  }
+
+  function addAnimation() {
+    scrollers.forEach((scroller) => {
+      scroller.setAttribute('data-animated', true);
+      const scrollerInner = scroller.querySelector('.scroller__inner');
+      const scrollerContent = Array.from(scrollerInner.children);
+
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute('aria-hidden', true);
+        scrollerInner.appendChild(duplicatedItem);
+      });
+    });
+  }
+</script>

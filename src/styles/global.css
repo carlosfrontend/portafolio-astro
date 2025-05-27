@@ -14,6 +14,10 @@
     'Apple Color Emoji', 'Segoe UI Emoji';
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

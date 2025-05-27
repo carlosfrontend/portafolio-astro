@@ -5,6 +5,7 @@ interface Props {
   id: string;
   title: string;
   className?: string;
+  key?: number;
 }
 const Logo: FunctionComponent<Props> = ({ id, title, className }: Props): JSX.Element =>
 

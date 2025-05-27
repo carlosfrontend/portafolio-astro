@@ -6,7 +6,10 @@ const socialIcons = fs.readFileSync(
   'utf-8'
 );
 
-const sprite = fs.readFileSync('./src/assets/images/sprite2.svg', 'utf-8');
+const skillsIcons = fs.readFileSync(
+  './src/assets/images/skillsIcons.svg',
+  'utf-8'
+);
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -40,7 +43,7 @@ const { title, description } = Astro.props;
   </head>
   <body>
     <div set:html={socialIcons} />
-    <div set:html={sprite} />
+    <div set:html={skillsIcons} />
     <Header />
     <slot />
     <Footer />
@@ -57,7 +60,7 @@ const { title, description } = Astro.props;
 </style>
 
 <!--Start of Tawk.to Script-->
-<script type='text/javascript'>
+<!-- <script type='text/javascript'>
   var Tawk_API = Tawk_API || {},
     Tawk_LoadStart = new Date();
   (function () {
@@ -69,10 +72,10 @@ const { title, description } = Astro.props;
     s1.setAttribute('crossorigin', '*');
     s0.parentNode.insertBefore(s1, s0);
   })();
-</script>
+</script> -->
 <!--End of Tawk.to Script-->
 
-<script>
+<!-- <script>
   const tawkWidgetCode = `
   var Tawk_API = Tawk_API || {},
     Tawk_LoadStart = new Date();
@@ -96,4 +99,4 @@ const { title, description } = Astro.props;
 
   // Call to function when page is loaded
   document.addEventListener('astro:page-load', agregarWidgetTawk);
-</script>
+</script> -->
