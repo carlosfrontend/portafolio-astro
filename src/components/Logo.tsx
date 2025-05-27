@@ -1,13 +1,9 @@
 import type { JSX } from "astro/jsx-runtime";
 import type { FunctionComponent } from "react";
 
-interface Props {
-  id: string;
-  title: string;
-  className?: string;
-  key?: number;
-}
-const Logo: FunctionComponent<Props> = ({ id, title, className }: Props): JSX.Element =>
+import type { LogoProps } from "../types/types.d.ts";
+
+const Logo: FunctionComponent<LogoProps> = ({ id, title, className }: LogoProps): JSX.Element =>
 
   <svg className={className} viewBox='0 0 24 24'>
     <title>{title}</title>
