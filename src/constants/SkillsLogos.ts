@@ -21,5 +21,6 @@ export const SKILLS_LOGOS: LogoProps[] = [
     { id: "vercel", title: "Logo de Vercel" },
     { id: "pnpm", title: "Logo de Pnpm" },
     { id: "markdown", title: "Logo de Markdown" },
-    { id: "bun", title: "Logo de Bun" }
+    { id: "bun", title: "Logo de Bun" },
+    { id: "nextjs", title: "Logo de NextJS" }
 ];
