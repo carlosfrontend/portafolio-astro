@@ -7,19 +7,30 @@ import Layout from '../../layouts/Layout.astro';
   title='Sobre Carlos Pulido - Desarrollador Web Frontend | Perfil Profesional'
   description='Conoce a Carlos Pulido, desarrollador web frontend. Descubre mi trayectoria, pasión por el código y el diseño, y cómo puedo aportar valor a tu equipo.'
 >
-  <main class='min-h-screen flex flex-col px-4 py-10 items-center md:mt-0'>
-    <div class='max-w-xl'>
-      <h1
-        class='font-black text-5xl antialiased mb-10 text-primary text-center'
-      >
-        Perfil Profesional
+  <main
+    class='relative w-full mt-0 flex flex-col px-4 items-center justify-around md:mt-0'
+  >
+    <div class='breadcrumbs text-sm flex flex-wrap relative top-10'>
+      <ul>
+        <li><a>Habilidades</a></li>
+        <li><a>Aficiones</a></li>
+        <li><a>Timeline</a></li>
+        <li><a>Tecnologías</a></li>
+        <li><a>Proyectos destacados</a></li>
+      </ul>
+    </div>
+    <div class='max-w-xs mt-20 mb-50 min-h-full px-6 py-4 md:max-w-xl'>
+      <h1 class='font-black text-3xl md:text-5xl antialiased mb-20 text-center'>
+        Perfil <span class='text-primary'>Profesional</span>
       </h1>
 
       <div class='divider'>
-        <h3 class='text-primary'>Introducción</h3>
+        <h3 class='text-primary text-2xl'>Introducción</h3>
       </div>
 
-      <p class='text-pretty text-xl'>
+      <p
+        class='text-pretty font-normal text-md md:text-xl pb-20 leading-relaxed'
+      >
         Soy Carlos Pulido, desarrollador web frontend con experiencia en
         tecnologías como HTML, CSS, JavaScript, TypeScript y Tailwind CSS. Mi
         pasión por el desarrollo web me impulsa a crear soluciones innovadoras y
@@ -29,31 +40,35 @@ import Layout from '../../layouts/Layout.astro';
         eficiencia del desarrollo.
       </p>
       <div class='divider'>
-        <h1 class='text-primary'>Mis Habilidades</h1>
+        <h3 class='text-primary text-2xl'>Mis Habilidades</h3>
       </div>
-      <p class='text-pretty text-xl'>
+      <p
+        class='text-pretty font-normal text-md md:text-xl pb-20 leading-relaxed'
+      >
         Mi enfoque en el diseño y la experiencia del usuario me permite crear
         interfaces intuitivas y atractivas que proporcionen una experiencia de
         usuario excepcional. En resumen, soy un desarrollador web frontend
         comprometido con la calidad y el diseño.
       </p>
-      <p class='text-pretty text-xl'>
+      <p
+        class='text-pretty font-normal text-md md:text-xl pb-20 leading-relaxed'
+      >
         Mi enfoque en el diseño y la experiencia del usuario me permite crear
         interfaces intuitivas y atractivas que proporcionen una experiencia de
         usuario excepcional. En resumen, soy un desarrollador web frontend
         comprometido con la calidad y el diseño.
       </p>
       <div class='divider'>
-        <h3 class='text-primary'>Aficiones</h3>
+        <h3 class='text-primary text-2xl'>Aficiones</h3>
       </div>
-      <p class='text-pretty text-xl'>
+      <p class='text-pretty text-md md:text-xl mb-20'>
         Me encanta explorar nuevas tecnologías y aprender sobre el mundo de la
         programación. Además soy un aficionado del senderismo y la musica.
       </p>
-      <div class='divider'>
-        <h3 class='text-primary'>Timeline</h3>
+      <div class='divider mb-20'>
+        <h3 class='text-primary text-2xl'>Timeline</h3>
       </div>
-      <div class='flex justify-center items-center w-full'>
+      <div class='flex justify-center items-center w-full mb-20'>
         <ul class='timeline timeline-vertical w-full md:w-80'>
           <li>
             <div class='timeline-start'>Actualidad</div>
@@ -161,15 +176,18 @@ import Layout from '../../layouts/Layout.astro';
         </ul>
       </div>
       <div class='divider'>
-        <h3 class='text-primary'>Tecnologías</h3>
+        <h3 class='text-primary text-2xl'>Tecnologías</h3>
       </div>
       <!-- Carousel goes here -->
       <SkillsCarousel client:load />
-      <div class='divider'>
-        <h3 class='text-primary'>Proyectos</h3>
+      <div class='divider mb-20'>
+        <h3 class='text-primary text-2xl'>Proyectos destacados</h3>
       </div>
-      <div class='flex flex-col items-center justify-between h-30 mt-10'>
-        <p>Haz click en el botón de abajo para ver algunos de mis proyectos</p>
+      <div class='flex flex-col items-center justify-between h-30'>
+        <p class='text-pretty text-md md:text-xl mb-20'>
+          Haz click en el botón de abajo para ver una vista previa de mis
+          proyectos y su código fuente en GitHub.
+        </p>
         <a
           class='btn btn-primary btn-xl transition-transform ease-in-out hover:scale-105'
           href='/projects'>Proyectos</a
@@ -178,3 +196,40 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </main>
 </Layout>
+<!-- <div class='max-w-xs px-6 relative top-20'>
+      <p class='text-pretty text-md md:text-xl mt-40'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, eius.
+        Quam et, ex exercitationem quidem molestias qui adipisci vitae mollitia
+        accusamus dolor excepturi? Dolore debitis distinctio odio eius esse cum.
+        Dolores, doloremque. Quas natus est vero iste totam reiciendis
+        excepturi, voluptas nostrum facilis. Sint in architecto consequuntur
+        deleniti exercitationem! Vitae amet tempora nam minus rem, maiores
+        nostrum est ex ea? Culpa facilis molestiae repellat praesentium
+        pariatur, inventore doloremque ratione dicta suscipit fugit id neque
+        totam eum adipisci. Accusamus facere consequatur molestias aliquam
+        debitis? Voluptatum, corporis unde! In iste dolor doloribus. Nobis
+        quibusdam fugit repellendus libero cum suscipit iste magnam eos magni
+        mollitia sunt modi autem omnis, nam possimus aspernatur laudantium
+        maxime quasi velit architecto neque officia a. Voluptate, quia nostrum?
+        Reiciendis perspiciatis, odio dolore doloribus nostrum adipisci dolor
+        facere ullam corrupti quis assumenda, earum voluptate quia nobis ut! Est
+        soluta voluptates veniam at debitis harum aspernatur delectus pariatur
+        esse quos. Porro maiores perferendis harum sit modi animi minus quisquam
+        cum nulla nihil sunt earum deleniti neque alias tenetur incidunt tempore
+        ratione explicabo, maxime quaerat? Fuga quod explicabo tenetur sequi
+        rerum. Ratione, voluptatibus id nobis exercitationem culpa pariatur nam
+        doloremque fuga nesciunt cumque ab! Nam sequi vel porro sapiente, non
+        deserunt veniam consequuntur odit at corporis animi, magni, autem earum
+        laborum? Aperiam accusamus laudantium repudiandae ipsa incidunt
+        molestias voluptatibus maiores, quos unde quia dolore saepe voluptates
+        explicabo voluptatum eum corrupti excepturi asperiores cumque tenetur
+        quasi perferendis autem debitis. Veniam, sequi atque! Inventore eius
+        quia laborum quaerat deleniti praesentium, magni minima veniam sequi.
+        Harum sapiente asperiores esse modi quam ipsa aut necessitatibus
+        officiis illo molestias tempora nostrum delectus, iste aperiam ut
+        veritatis? Libero explicabo molestiae cupiditate, ratione sed similique
+        ab nam vero quisquam laudantium sint maiores labore placeat eaque animi
+        aspernatur facere aliquam hic repellendus nulla deserunt. Sed, nam!
+        Libero, cumque laudantium.
+      </p>
+    </div> -->

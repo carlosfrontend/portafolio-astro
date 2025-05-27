@@ -13,6 +13,7 @@
     blinkmacsystemfont, 'Segoe UI', 'Noto Sans', helvetica, arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji';
 }
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

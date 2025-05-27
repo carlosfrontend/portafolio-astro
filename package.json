@@ -16,13 +16,11 @@
     "@types/react-dom": "^19.1.5",
     "astro": "^5.7.13",
     "daisyui": "^5.0.35",
-    "embla-carousel-auto-scroll": "^8.6.0",
-    "embla-carousel-autoplay": "^8.6.0",
-    "embla-carousel-react": "^8.6.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hot-toast": "^2.5.2",
     "sharp": "^0.34.2",
+    "swiper": "^11.2.8",
     "tailwindcss": "^4.1.7"
   }
 }
