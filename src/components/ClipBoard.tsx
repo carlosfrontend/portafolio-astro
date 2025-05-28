@@ -9,7 +9,7 @@ type EmailType = string
 const ClipBoard: FunctionComponent = (): JSX.Element => {
     const email: EmailType = 'carlosfrontend@hotmail';
     const [emailCopied, setEmailCopied] = useState<boolean>(false);
-    const notify = () => toast.custom(<ToastCopied />);
+    const notify = (time: string): string => toast.custom(<ToastCopied time={time} />);
 
 
     useEffect(() => {
@@ -24,7 +24,9 @@ const ClipBoard: FunctionComponent = (): JSX.Element => {
 
         try {
             await window.navigator.clipboard.writeText(email)
-            notify();
+            const now: Date = new Date();
+            const currentTime: string = now.getHours() + ":" + now.getMinutes();
+            notify(currentTime);
             setEmailCopied(true);
         } catch (err) {
 

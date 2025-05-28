@@ -4,4 +4,8 @@ interface LogoProps {
     className?: string;
 }
 
-export { LogoProps };
+interface ToastCopiedProps {
+    time: string
+}
+
+export { LogoProps, ToastCopiedProps };

@@ -1,12 +1,8 @@
 import type { JSX } from "astro/jsx-runtime";
 import type { FunctionComponent } from "react";
+import type { ToastCopiedProps } from "../types/types.d.ts";
 
-
-
-const now: Date = new Date();
-const time: string = now.getHours() + ":" + now.getMinutes();
-
-const ToastCopied: FunctionComponent = (): JSX.Element => {
+const ToastCopied: FunctionComponent<ToastCopiedProps> = ({ time }): JSX.Element => {
     return (
         <>
 
