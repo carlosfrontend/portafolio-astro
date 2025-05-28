@@ -4,7 +4,7 @@ import Logo from '../components/Logo';
 ---
 
 <div class='max-w-full overflow-hidden py-10'>
-  <div class='scroller' data-direction='left' data-speed='slow'>
+  <div class='scroller max-w-[600px]' data-direction='left' data-speed='slow'>
     <div class='scroller__inner'>
       {
         SKILLS_LOGOS.map((skill) => (
@@ -32,7 +32,6 @@ import Logo from '../components/Logo';
 <style>
   .scroller {
     max-width: 600px;
-    /* border: 5px solid var(--color-primary); */
   }
   .scroller__inner {
     display: flex;
